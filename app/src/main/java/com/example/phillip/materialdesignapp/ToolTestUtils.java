@@ -23,6 +23,5 @@ public class ToolTestUtils {
     }
 
 //    public Tool getNewTool(ToolType toolType,ToolPagerAdapter.Tab tab){
-//
 //    }
 }
