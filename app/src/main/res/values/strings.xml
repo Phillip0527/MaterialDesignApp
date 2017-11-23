@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MaterialDesignApp</string>
+    <string name="clamps">螺丝钳</string>
+    <string name="clamps_description">用来拧螺丝的工具</string>
+    <string name="saw">锯子</string>
+    <string name="saw_description">用来锯木材的工具</string>
+    <string name="drills">钻头</string>
+    <string name="drills_description">用来钻东西的工具</string>
+    <string name="sanders">砂纸</string>
+    <string name="sanders_description">用来打磨木材的工具</string>
+    <string name="routers">路由器</string>
+    <string name="routers_description">用来连接网络的工具</string>
+    <string name="more">更多</string>
+    <string name="more_description">其他更多的工具</string>
+</resources>
