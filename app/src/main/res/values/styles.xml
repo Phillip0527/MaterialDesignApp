@@ -8,12 +8,19 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark_green</item>
         <!-- 控件颜色 -->
         <item name="colorAccent">@color/colorAccent_green</item>
+        <!--状态栏透明-->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
         <!-- 返回键样式 -->
         <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
     </style>
     <!--导航栏按钮样式（返回键样式）-->
     <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@android:color/white</item>
+    </style>
+
+    <!--NavigationView样式-->
+    <style name="NavigationViewStyle" >
+        <item name="android:actionMenuTextColor">@color/colorPrimaryDark</item>
     </style>
 
     <!--tab点击样式-->

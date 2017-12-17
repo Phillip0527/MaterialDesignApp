@@ -8,8 +8,10 @@
     <color name="colorPrimary_green">#00bcd4</color>
     <color name="colorPrimaryDark_green">#0097a7</color>
     <color name="colorAccent_green">#84ffff</color>
+    <color name="colorPrimary_green_50">#8000bcd4</color>
 
     <color name="colorAccent_yelloe">#ffff8d</color>
 
 
 </resources>
+

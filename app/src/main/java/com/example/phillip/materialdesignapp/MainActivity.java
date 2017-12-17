@@ -1,8 +1,11 @@
 package com.example.phillip.materialdesignapp;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -41,8 +45,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_main_drawerlayout1);
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = getWindow().getDecorView();
+            int option = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            decorView.setSystemUiVisibility(option);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+        // 设置状态栏透明
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        // 清除状态栏透明
+        //getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         //toolbar
         mToolbar=findViewById(R.id.toolbar);
@@ -54,15 +69,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.about, R.string.about){
             @Override
             public void onDrawerOpened(View drawerView) {
-                // 设置状态栏透明
-//                getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
                 super.onDrawerOpened(drawerView);
             }
 
             @Override
             public void onDrawerClosed(View drawerView) {
-                // 清除状态栏透明
-//                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
                 super.onDrawerClosed(drawerView);
             }
         };
@@ -72,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         //使抽屉导航栏的开启生效
-        mToolbar.setNavigationIcon(R.mipmap.ic_menu_white_24dp);
+        //mToolbar.setNavigationIcon(R.mipmap.ic_menu_white_24dp);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,18 +115,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()){
             case R.id.nav_clamps:
                 mCurrentNavPosition=0;
+                menuItem.setChecked(true);
                 break;
             case R.id.nav_saw:
                 mCurrentNavPosition=1;
+                menuItem.setChecked(true);
                 break;
             case R.id.nav_drills:
                 mCurrentNavPosition=2;
+                menuItem.setChecked(true);
                 break;
             case R.id.nav_sanders:
                 mCurrentNavPosition=3;
+                menuItem.setChecked(true);
                 break;
             case R.id.nav_routers:
                 mCurrentNavPosition=4;
+                menuItem.setChecked(true);
                 break;
             case R.id.nav_more:
             case R.id.nav_info:
@@ -128,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
 
-        menuItem.setChecked(true);
+
         setupTabs(mCurrentNavPosition);
         mDrawerLayout.closeDrawer(GravityCompat.START);
 
