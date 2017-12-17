@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private int mCurrentNavPosition;
     private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle toggle;
     private NavigationView mNavigationView;
     private ImageView pic_iv;
     private Toolbar mToolbar;
@@ -50,9 +51,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         mDrawerLayout=findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, mDrawerLayout, mToolbar, R.string.index, R.string.history);
+        toggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.about, R.string.about){
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                // 设置状态栏透明
+//                getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                super.onDrawerOpened(drawerView);
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                // 清除状态栏透明
+//                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                super.onDrawerClosed(drawerView);
+            }
+        };
         mDrawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+
 
         //使抽屉导航栏的开启生效
         mToolbar.setNavigationIcon(R.mipmap.ic_menu_white_24dp);
@@ -126,8 +143,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         final MenuItem menuItem=menu.getItem(mCurrentNavPosition);
         menuItem.setChecked(true);
         setupTabs(mCurrentNavPosition);
-        // 清除状态栏透明
-        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
     }
 
     @Override
