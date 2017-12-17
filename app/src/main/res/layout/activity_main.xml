@@ -19,9 +19,19 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
+            android:theme="@style/TabLayoutClickStyle"
             android:elevation="4dp"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorColor="@color/colorAccent_yelloe"
+            app:tabPaddingStart="12dp"
+            app:tabPaddingEnd="12dp"
+            app:tabSelectedTextColor="#ffffff"
+            app:tabTextColor="#99ffffff"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabGravity="center"
+            app:tabContentStart="60dp"
             app:tabMode="scrollable"/>
 
         <android.support.v4.view.ViewPager
@@ -36,8 +46,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_drawer_header"
-        app:menu="@menu/nav_drawer"/>
+        app:menu="@menu/nav_drawer"
+        />
 
 
 </android.support.v4.widget.DrawerLayout>

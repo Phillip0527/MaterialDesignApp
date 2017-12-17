@@ -12,4 +12,22 @@
     <string name="routers_description">用来连接网络的工具</string>
     <string name="more">更多</string>
     <string name="more_description">其他更多的工具</string>
+
+
+    <string name="about">关于</string>
+    <string name="stationary">固定</string>
+    <string name="handheld">手持型</string>
+    <string name="battery">一号电池</string>
+    <string name="battery2">二号电池</string>
+    <string name="battery3">三号电池</string>
+    <string name="battery4">四号电池</string>
+
+    <string name="index">主页</string>
+    <string name="history">观看历史</string>
+    <string name="cache">本地缓存</string>
+    <string name="collection">我的收藏</string>
+    <string name="guanzhu">我的关注</string>
+    <string name="info">我的信息</string>
+    <string name="pifu">皮肤</string>
+    <string name="share">分享</string>
 </resources>

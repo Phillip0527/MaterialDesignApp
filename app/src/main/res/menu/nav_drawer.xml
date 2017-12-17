@@ -1,29 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/first_group"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_clamps"
-            android:title="@string/clamps"
+            android:icon="@mipmap/ic_home_black_24dp"
+            android:title="@string/index"
             />
         <item
             android:id="@+id/nav_saw"
-            android:title="@string/saw"
+            android:icon="@mipmap/ic_watch_later_black_24dp"
+            android:title="@string/history"
             />
         <item
             android:id="@+id/nav_drills"
-            android:title="@string/drills"
+            android:icon="@mipmap/ic_cloud_download_black_24dp"
+            android:title="@string/cache"
             />
         <item
             android:id="@+id/nav_sanders"
-            android:title="@string/sanders"
+            android:icon="@mipmap/ic_stars_black_24dp"
+            android:title="@string/collection"
             />
         <item
             android:id="@+id/nav_routers"
-            android:title="@string/routers"
-            />
-        <item
-            android:id="@+id/nav_more"
-            android:title="@string/more"
+            android:icon="@mipmap/ic_visibility_black_24dp"
+            android:title="@string/guanzhu"
             />
     </group>
+
+    <item android:title="设置">
+        <menu>
+            <group
+                android:id="@+id/second_group"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_info"
+                    android:icon="@mipmap/ic_perm_contact_calendar_black_24dp"
+                    android:title="@string/info"
+                    />
+                <item
+                    android:id="@+id/nav_pifu"
+                    android:icon="@mipmap/ic_toys_black_24dp"
+                    android:title="@string/pifu"
+                    />
+                <item
+                    android:id="@+id/nav_more"
+                    android:icon="@mipmap/ic_help_black_24dp"
+                    android:title="@string/more"
+                    />
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@mipmap/ic_share_black_24dp"
+                    android:title="@string/share"
+                    />
+            </group>
+        </menu>
+    </item>
+
 </menu>
