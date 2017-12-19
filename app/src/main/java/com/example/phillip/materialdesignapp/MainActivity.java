@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
+import com.example.phillip.materialdesignapp.pojo.ToolType;
 
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private NavigationView mNavigationView;
     private ImageView pic_iv;
     private Toolbar mToolbar;
-    private ToolType [] mToolTypes =ToolType.values();// enum.values()枚举取值
+    private ToolType[] mToolTypes =ToolType.values();// enum.values()枚举取值
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //toolbar
         mToolbar=findViewById(R.id.toolbar);
-        mToolbar.setTitle("木工工具");
+        mToolbar.setTitle("主页");
         setSupportActionBar(mToolbar);
 
 
@@ -114,30 +115,45 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()){
             case R.id.nav_clamps:
+                mToolbar.setTitle("主页");
                 mCurrentNavPosition=0;
                 menuItem.setChecked(true);
                 break;
             case R.id.nav_saw:
+                mToolbar.setTitle("观看历史");
                 mCurrentNavPosition=1;
                 menuItem.setChecked(true);
                 break;
             case R.id.nav_drills:
+                mToolbar.setTitle("本地缓存");
                 mCurrentNavPosition=2;
                 menuItem.setChecked(true);
                 break;
             case R.id.nav_sanders:
+                mToolbar.setTitle("我的收藏");
                 mCurrentNavPosition=3;
                 menuItem.setChecked(true);
                 break;
             case R.id.nav_routers:
+                mToolbar.setTitle("我的关注");
                 mCurrentNavPosition=4;
                 menuItem.setChecked(true);
                 break;
-            case R.id.nav_more:
             case R.id.nav_info:
-            case R.id.nav_pifu:
-            case R.id.nav_share:
+                mToolbar.setTitle("我的信息");
                 mCurrentNavPosition=5;
+                break;
+            case R.id.nav_pifu:
+                mToolbar.setTitle("皮肤");
+                mCurrentNavPosition=6;
+                break;
+            case R.id.nav_help:
+                mToolbar.setTitle("帮助");
+                mCurrentNavPosition=7;
+                break;
+            case R.id.nav_share:
+                mToolbar.setTitle("分享");
+                mCurrentNavPosition=8;
                 break;
             default:
                 Log.w(TAG,"Unknown drawer item selected");

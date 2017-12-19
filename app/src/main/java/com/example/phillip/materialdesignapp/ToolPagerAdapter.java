@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.phillip.materialdesignapp.pojo.ToolType;
+
 /**
  * Created by Phillip on 2017/12/6.
  */
@@ -13,12 +15,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class ToolPagerAdapter extends FragmentPagerAdapter {
     public enum Tab{
         ABOUT(R.string.about),
-        STATIONARY(R.string.stationary),
-        HANDHELD(R.string.handheld),
-        BATTERY(R.string.battery),
-        BATTERY2(R.string.battery2),
-        BATTERY3(R.string.battery3),
-        BATTERY4(R.string.battery4);
+        HUWAI(R.string.huwai),
+        XINGXIU(R.string.xingxiu),
+        REMEN(R.string.remen),
+        MEISHI(R.string.meishi),
+        ERCIYUAN(R.string.erciyuan),
+        CHANGLIAO(R.string.changliao),
+        YINGPING(R.string.yingping);
 
 
         private final int mStringResource;
@@ -57,8 +60,8 @@ public class ToolPagerAdapter extends FragmentPagerAdapter {
             case 4:
             case 5:
             case 6:
+            case 7:
                 return ToolListFragment.newInstance(mToolType,mTabs[position]);
-//                return .newInstance(mToolType,mTabs[position]);
         }
         throw new IllegalArgumentException("Unhandled position: "+ position);
     }

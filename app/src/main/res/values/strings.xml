@@ -23,17 +23,31 @@
     <string name="battery4">四号电池</string>
 
     <string name="index">主页</string>
+    <string name="index_description">主页面内容</string>
     <string name="history">观看历史</string>
+    <string name="history_description">历史页面内容</string>
     <string name="cache">本地缓存</string>
+    <string name="cache_description">缓存页面内容</string>
     <string name="collection">我的收藏</string>
+    <string name="collection_description">我的收藏页面内容</string>
     <string name="guanzhu">我的关注</string>
+    <string name="guanzhu_description">我的关注页面内容</string>
     <string name="info">我的信息</string>
+    <string name="info_description">我的信息页面内容</string>
     <string name="pifu">皮肤</string>
+    <string name="pifu_description">皮肤页面内容</string>
+    <string name="help">帮助</string>
+    <string name="help_description">帮助页面内容</string>
     <string name="share">分享</string>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="share_description">分享页面内容</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="huwai">户外</string>
+    <string name="xingxiu">星秀</string>
+    <string name="remen">热门</string>
+    <string name="meishi">美食</string>
+    <string name="erciyuan">二次元</string>
+    <string name="changliao">畅聊</string>
+    <string name="yingping">影评</string>
 
-    <string name="action_settings">Settings</string>
+
 </resources>

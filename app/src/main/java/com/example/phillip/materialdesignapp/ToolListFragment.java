@@ -6,6 +6,10 @@ import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.AdapterView;
 
+import com.example.phillip.materialdesignapp.pojo.Tool;
+import com.example.phillip.materialdesignapp.pojo.ToolType;
+import com.example.phillip.materialdesignapp.utils.ToolTestUtils;
+
 import java.util.ArrayList;
 
 /**
@@ -21,7 +25,7 @@ public class ToolListFragment extends ListFragment implements AdapterView.OnItem
     private ToolPagerAdapter.Tab mTab;
     private ToolArrayAdapter mToolArrayAdapter;
 
-    public static ToolListFragment newInstance(ToolType toolType,ToolPagerAdapter.Tab tab){
+    public static ToolListFragment newInstance(ToolType toolType, ToolPagerAdapter.Tab tab){
         final ToolListFragment fragment=new ToolListFragment();
         final Bundle args =new Bundle();
         args.putString(ARG_TOOL_TYPE,toolType.name());

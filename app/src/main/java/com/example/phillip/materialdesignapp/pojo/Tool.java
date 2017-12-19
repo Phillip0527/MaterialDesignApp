@@ -1,4 +1,4 @@
-package com.example.phillip.materialdesignapp;
+package com.example.phillip.materialdesignapp.pojo;
 
 import android.os.Parcel;
 import android.os.Parcelable;

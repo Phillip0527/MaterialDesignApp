@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Phillip0527"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:textSize="@dimen/tab_text_size"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -31,6 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="yuaimelin1314@126.com"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:textSize="@dimen/tab_text_size"/>
 
 </LinearLayout>

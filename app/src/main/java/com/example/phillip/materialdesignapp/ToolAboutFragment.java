@@ -13,6 +13,8 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.phillip.materialdesignapp.pojo.ToolType;
+
 
 public class ToolAboutFragment extends Fragment {
 

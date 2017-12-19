@@ -2,7 +2,6 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <group
-
         android:checkableBehavior="single">
         <item
             android:id="@+id/nav_clamps"
@@ -32,7 +31,7 @@
             />
     </group>
 
-    <item android:title="设置">
+    <item android:title="更多">
         <menu>
             <!--<group-->
                 <!--android:id="@+id/second_group"-->
@@ -48,9 +47,9 @@
                     android:title="@string/pifu"
                     />
                 <item
-                    android:id="@+id/nav_more"
+                    android:id="@+id/nav_help"
                     android:icon="@mipmap/ic_help_black_24dp"
-                    android:title="@string/more"
+                    android:title="@string/help"
                     />
                 <item
                     android:id="@+id/nav_share"
